@@ -12,8 +12,8 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"C# Project file": {
-		"prefix": "csproj",
+	"Xunit test suite project file": {
+		"prefix": "xunit",
 		"body": [
 			"<Project Sdk=\"Microsoft.NET.Sdk\">",
 			"	<PropertyGroup>",
@@ -29,6 +29,32 @@
 			"	</ItemGroup>",
 			"</Project>"
 		],
+		"description": "C# project file template for a Xunit test template"
+	},
+	"C# project file": {
+		"prefix": "csproj",
+		"body": [
+			"<Project Sdk=\"Microsoft.NET.Sdk\">",
+			"	<PropertyGroup>",
+			"		<TargetFramework>${1|netcoreapp3.1,net5.0|}</TargetFramework>",
+			"		<IsPackable>false</IsPackable>",
+			"	</PropertyGroup>",
+			"</Project>"
+		],
 		"description": "Basic C# project file template"
+	},
+	"Package reference": {
+		"prefix": "pkg",
+		"body": [
+			"<PackageReference Include=\"$0\"/>"
+		],
+		"description": "NuGet package dependency"
+	},
+	"Project reference": {
+		"prefix": "proj",
+		"body": [
+			"<ProjectReference Include=\"$0\"/>"
+		],
+		"description": "Project dependency, with valid path to another project"
 	}
 }
