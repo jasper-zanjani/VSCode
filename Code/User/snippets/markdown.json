@@ -43,5 +43,40 @@
 			"\t${TM_SELECTED_TEXT}",
 			""
 		]
-	}
+	},
+	"CRUD tabs": {
+		"prefix": "crud",
+		"body": [
+			"=== \":material-plus: Create\"",
+			"",
+			"    ```sh",
+			"    ${TM_SELECTED_TEXT:command} ${1:add}",
+			"    ```",
+			"",
+			"=== \":material-eye: Read\"",
+			"",
+			"    ```sh",
+			"    ${TM_SELECTED_TEXT:command} ${2:get}",
+			"    ```",
+			"",
+			"=== \":material-format-list-text: List\"",
+			"",
+			"    ```sh",
+			"    ${TM_SELECTED_TEXT:command} ${3:list}",
+			"    ```",
+			"",
+			"=== \":material-pencil: Update\"",
+			"",
+			"    ```sh",
+			"    ${TM_SELECTED_TEXT:command} ${4:set}",
+			"    ```",
+			"",
+			"=== \":material-trash-can: Delete\"",
+			"",
+			"    ```sh",
+			"    ${TM_SELECTED_TEXT:command} ${5:remove}",
+			"    ```",
+
+		]
+	},
 }
