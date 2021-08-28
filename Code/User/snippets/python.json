@@ -1,0 +1,36 @@
+{
+	"Entrypoint": {
+		"prefix": "__main__",
+		"body": [
+			"def main():",
+			"\tpass",
+			"",
+			"",
+			"if __name__ == '__main__':",
+			"\tmain()",
+			""
+		],
+		"description": "Standard entrypoint"
+	},
+	"GTK template": {
+		"prefix": "gtk",
+		"body": [
+			"import gi",
+			"gi.require_version('Gtk', '3.0')",
+			"from gi.repository import Gtk\n",
+			"class ApplicationWindow(Gtk.ApplicationWindow):",
+			"\tdef __init__(self, *args, **kwargs):",
+			"\t\tsuper().__init__(*args, **kwargs)\n",
+			"class Application(Gtk.Application):",
+			"\tdef __init__(self):",
+			"\t\tsuper().__init__(application_id='org.example.myapp')\n",
+			"\tdef do_activate(self):",
+			"\t\tself.window = ApplicationWindow(application=self)",
+			"\t\tself.window.present()\n",
+			"if __name__ == '__main__':",
+			"\tapp = Application()",
+			"\tapp.run()",
+		],
+		"description": "Template for PyGTK application"
+	}
+}
